@@ -1,24 +1,18 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-const ethers = require("ethers");
-
-document.addEventListener("click", function() {
-    // provider is a ethereum provider, and we create it with window.ethereum, which is
-    // how we access Metamask in code.
-    // the window.ethereum object is available if a user has metamask installed.
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    // we can call the .send method on the provider, and tell it what we want: to request accounts.
-    // this is how we get metamasks APPROVAL for a certain website.
-    provider.send("eth_requestAccounts", []).then(addresses => {
-        // use the ethers library to get the users balance, and display it to the page.
-        console.log(addresses);
-        const address = addresses[0];
-        console.log(address);
-
-        provider.getBalance(address).then(balance => {
-            console.log(balance.toString());
-        })
-    })
-});
+const ethers = require ("ethers");
+//we require ethers above to work with eth wallets, addresses etc.
+// add an event listenter 
+document.getElementById("walletbutton").addEventListener("click", function(){
+    // document.getElementById("address").innerHTML = "thiis where your address will appear"
+    console.log("you clickity clicked")
+    alert("why doesn't this print?")
+}.b)
+//use alert to make a popup when the page is clicked
+//alert("This message pops up automagically")
+// document.addEventListener("click", function(){
+//     alert("You are clicking nothing")
+//     console.log("User clicked nothing")
+// })
 },{"ethers":150}],2:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
