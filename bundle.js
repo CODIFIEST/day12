@@ -52,7 +52,8 @@ document.getElementById("current-block-button").addEventListener("click", functi
 document.getElementById("gas-price-button").addEventListener("click", function(){
   provider.getGasPrice()
   .then((gasprice)=>{
-    document.getElementById("gas-price").innerHTML = 'Current gas price is ' + gasprice;
+    let gweiPrice = parseInt(gasprice / 1000000000)
+    document.getElementById("gas-price").innerHTML = 'Current gas price is ' + gweiPrice;
   })
 
   //there has to be an easier way than the below
