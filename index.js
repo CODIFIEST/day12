@@ -8,13 +8,13 @@ document.getElementById("walletbutton").addEventListener("click", function(){
     window.ethereum.request({
         method: "eth_requestAccounts"
     }).then(address => {
-        document.getElementById("address").innerHTML = `Your full address is ` + address
+        // document.getElementById("address").innerHTML = `Your full address is ` + address
         address = address.toString();
         let first = address.substr(0,5);
         let last = address.substr(address.length - 4)
         let trunc = first + "..." + last
         document.getElementById("walletbutton").innerHTML = trunc
-            })
+        })
 
     // document.getElementById("address").innerHTML = "thiis where your address will appear"
     // console.log("you clickity clicked")
@@ -32,10 +32,7 @@ document.getElementById("balance-button").addEventListener("click", function(){
             alert(`your balance is ` + balance.toString())
             // document.getElementById("balance-button").innerHTML = balance.toString();
             // console.log (balance.toString());
-
         })
-
-
     })
 })
 
@@ -43,17 +40,17 @@ document.getElementById("balance-button").addEventListener("click", function(){
 document.getElementById("current-block-button").addEventListener("click", function(){
     provider.getBlockNumber()
     .then((blocknumber) => {
-        document.getElementById("current-block").innerHTML = 'Eth current block number is ' + blocknumber;
+        document.getElementById("current-block-button").innerHTML = 'Eth current block number is ' + blocknumber + `\nClick to refresh`;
     })
 })
 
 //get current gas price
 document.getElementById("gas-price-button").addEventListener("click", function(){
-  provider.getGasPrice()
-  .then((gasprice)=>{
-    let gweiPrice = parseInt(gasprice / 1000000000)
-    document.getElementById("gas-price").innerHTML = 'Current gas price is ' + gweiPrice;
-  })
+    provider.getGasPrice()
+    .then((gasprice) => {
+        let gweiPrice = parseInt(gasprice / 1000000000)
+        document.getElementById("gas-price-button").innerHTML = 'Current gas price is ' + gweiPrice + ` Click to refresh`;
+    })
 
   //there has to be an easier way than the below
     // provider.getBlockWithTransactions()
@@ -65,9 +62,6 @@ document.getElementById("gas-price-button").addEventListener("click", function()
     // })
 })
    
-        
-    // });
-
 //use alert to make a popup when the page is clicked
 //alert("This message pops up automagically")
 // document.addEventListener("click", function(){

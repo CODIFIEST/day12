@@ -8,7 +8,28 @@
     font-size: 28px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 10px;
 }
 .button1 {
     background-color: azure;
+}
+.wallet{
+    color:black;
+    margin: 0 10 10 auto;
+    display: block;
+
+}
+.div{
+
+   width: max-content;
+   height: auto;
+   border: 4px darkblue;
+}
+.main-block{
+  
+    width:auto;
+    border-radius: 40px; 
+    height: auto;
+    border: 4px solid darkblue;
+    background-color: rgb(67, 73, 148);
 }

@@ -3,7 +3,12 @@
         <link rel="stylesheet" href="index.css">
       </head>
     <body>
-        <DIV><center>
+        <div>
+            <button id="walletbutton" class="button wallet">Connect Your Wallet</button>
+        </div> 
+        <DIV class="main-block">
+            
+            <center>
             <DIV><H1>No Rugs Here</H1></DIV>
             <div><h2>Magically find your eth balance below</h2></div>
             <br>
@@ -13,22 +18,20 @@
             <!--add in a button to grab an eth balance here
             add an ID to the buttonqne 43r34 5o i5 in the index.js file
             -->
-            <div>
-                <button id="walletbutton" class="button button1">Connect Your Wallet</button>
-            </div>
-            <DIV>
+
+            <!-- <DIV>
                 <p id="address"></p>
-                <!--address should populate here eventually-->
-            </DIV>
+                address should populate here eventually
+            </DIV> -->
             <DIV>
                 <button id ="balance-button" class = "button button1">Click to check your balance</button>
             </DIV>
             <DIV>
                 <button id="current-block-button" class = "button button1">Click to see current Eth block</button>
-                <p id="current-block"></p>
+                <!-- <p id="current-block"></p> -->
             </DIV>
             <div>
-                <button id="gas-price-button" class = "button button1">Click to see current gas pricein gwei</button>
+                <button id="gas-price-button" class = "button button1">Click to see current gas price in gwei</button>
                 <h3 id="gas-price"></h3>
             </div>
         </center></DIV>
